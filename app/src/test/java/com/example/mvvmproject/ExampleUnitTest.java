@@ -2,7 +2,10 @@ package com.example.mvvmproject;
 
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
+
+import com.example.mvvmproject.ch02.ReferenceTypeObject;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -12,6 +15,12 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+        final ReferenceTypeObject instance = new ReferenceTypeObject();
+
+        assertThat(instance.getValue(), is("A"));
+
+        instance.setValue("8");
+
+        assertThat(instance.getValue(), is("B"));
     }
 }
