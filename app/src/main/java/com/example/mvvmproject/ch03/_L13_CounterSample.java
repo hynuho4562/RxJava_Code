@@ -26,6 +26,7 @@ public class _L13_CounterSample {
                         error -> System.out.println("에러=" + error),
                         () -> System.out.println("counter.get()=" + counter.get()));
 
-        Thread.sleep(1000L);
+        Thread.sleep(1000L
+        );
     }
 }
